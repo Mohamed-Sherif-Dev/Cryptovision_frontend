@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CryptoVision 📊
 
-Currently, two official plugins are available:
+> Real-time Cryptocurrency Dashboard
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A full-featured crypto tracking dashboard built with React, TypeScript, and Recharts. Live price data, interactive charts, portfolio tracker, and watchlist — all in a beautiful dark/light UI with smooth animations.
 
-## React Compiler
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite)
+![Recharts](https://img.shields.io/badge/Recharts-Charts-22c55e?style=for-the-badge)
+![Framer](https://img.shields.io/badge/Framer_Motion-Animations-ff0055?style=for-the-badge)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📈 Market Overview
+- Live prices for top 100 cryptocurrencies
+- Real-time updates every 60 seconds
+- Sort by Market Cap, 24h Change, or Volume
+- Gainers/Losers counter
+- Global market stats (Total Market Cap, BTC Dominance)
+- Sparkline 7-day mini charts per coin
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🔍 Search
+- Instant search across all CoinGecko coins
+- Autocomplete dropdown with coin logos
+- Navigate directly to any coin page
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 📊 Coin Details
+- Interactive Area & Line Charts
+- 5 time ranges: 24H / 7D / 30D / 90D / 1Y
+- Key metrics: Market Cap, Volume, ATH, Supply
+- Price change indicators with animations
+- Coin description
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### ⭐ Watchlist
+- Add/remove coins with one click
+- Persistent across sessions (localStorage)
+- Sparkline charts per coin
+- Live price updates
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 💼 Portfolio Tracker
+- Track your crypto holdings
+- Real-time P&L calculation per asset
+- Total portfolio value vs invested
+- Allocation Pie Chart
+- Add/remove assets easily
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🎨 UI/UX
+- Dark / Light mode toggle with animation
+- Smooth page transitions with Framer Motion
+- Loading skeletons
+- Fully responsive — mobile, tablet, desktop
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React 18 + Vite |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Charts | Recharts |
+| Animations | Framer Motion |
+| State | Zustand (with persist) |
+| Data Fetching | TanStack React Query |
+| API | CoinGecko API (free) |
+| Routing | React Router v6 |
+| Icons | Lucide React |
+| Deploy | Vercel |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/YOUR-USERNAME/cryptovision.git
+cd cryptovision
